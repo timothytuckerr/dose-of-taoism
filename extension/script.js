@@ -4,7 +4,14 @@ window.onload = function(event) {
         .then(response => response.json())
         .then(data => {
             console.log(data)
-            document.getElementById("number").innerHTML = data['number']
+            document.getElementById("header").innerHTML = "The Tao Te Ching, Chapter " + data['number']
             document.getElementById("text").innerHTML = data['text']
-        })
+    })
+    fetch('https://timoth-yt.herokuapp.com/daily-dose-image')
+        .then(response => response.json())
+        .then(data => {
+            console.log(data)
+            document.body.style.backgroundImage = "url(" + data['url'] + ")";
+    })
+
 };
