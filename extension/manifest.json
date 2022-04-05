@@ -1,0 +1,10 @@
+{
+  "name": "Dose of Taoism",
+  "description": "Ground yourself with the Tao Te Ching",
+  "version": "1.0",
+  "manifest_version": 3,
+  "host_permissions": ["https://timoth-yt.herokuapp.com/", "https://api.unsplash.com/"],
+  "chrome_url_overrides" : {
+      "newtab": "index.html"
+  }
+}
