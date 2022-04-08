@@ -13,5 +13,15 @@ window.onload = function(event) {
             console.log(data)
             document.body.style.backgroundImage = "url(" + data['url'] + ")";
     })
-
 };
+
+let button = document.getElementById("refresh");
+button.addEventListener("click", function(event) {
+    console.log('click');
+    fetch('https://timoth-yt.herokuapp.com/refresh-daily-image')
+        .then(response => response.json())
+        .then(data => {
+            console.log(data)
+            window.location.reload();
+    })
+})
